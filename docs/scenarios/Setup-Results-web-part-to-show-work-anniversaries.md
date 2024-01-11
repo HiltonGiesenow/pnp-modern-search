@@ -1,5 +1,5 @@
 
-Getting PnP Modern Search to show work anniversaries should be easy enoght, right? Just add a couple of managed properties and a couple of web parts and you are done. Well, not quite.
+Getting PnP Modern Search to show work anniversaries should be easy enough, right? Just add a couple of managed properties and a couple of web parts and you are done. Well, not quite.
 
 The problem is that date manipulation in KQL is hard at best and sometimes impossible. In order to find a work anniversary you must compare Today and the Hiredate managed property, but ONLY the day and month part.
 
@@ -15,9 +15,10 @@ We want to be able to display two options:
 
 ## How to cheat
 In order to achieve the objectives, I had to get:
+
 - The account 
 - The hiredate, but with the year segment being the current year
-- The number of years the employee has been with company at the next anniversary
+- The number of years the employee has been with the company at the next anniversary
 
 ![birthdayAndHiredateSynclist](..\assets\Setup-Results-web-part-to-show-work-anniversaries\BirthdayAndHiredateSyncList.png)
 
