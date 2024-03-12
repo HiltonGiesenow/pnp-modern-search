@@ -27,6 +27,7 @@
     | _ExternalItem.Read.All_ | Allow search for connector items using Graph API (External Items).
     | _Bookmark.Read.All_ | Allow search for Bookmarks in Microsoft Search in your organization.
     | _Acronym.Read.All_ | Allow search for Acronyms in Microsoft Search in your organization.
+    | _QnA.Read.All_ | Allow search for Q&A questions in Microsoft Search in your organization.
     | _Chat.Read_ | Allow search for Teams messages.
     | _ChannelMessage.Read.All_ | Read user channel messages.
 

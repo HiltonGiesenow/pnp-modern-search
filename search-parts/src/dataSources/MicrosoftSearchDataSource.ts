@@ -35,7 +35,8 @@ export enum EntityType {
     Person = 'person',
     TeamsMessage = 'chatMessage',
     Bookmark = 'bookmark',
-    Acronym = 'acronym'
+    Acronym = 'acronym',
+	QnA = 'qna'
 }
 
 export interface IMicrosoftSearchDataSourceProperties {
@@ -166,6 +167,10 @@ export class MicrosoftSearchDataSource extends BaseDataSource<IMicrosoftSearchDa
         {
             key: EntityType.Acronym,
             text: "Acronyms"
+        },
+        {
+            key: EntityType.QnA,
+            text: "QnA"
         }
     ];
 
@@ -812,8 +817,8 @@ export class MicrosoftSearchDataSource extends BaseDataSource<IMicrosoftSearchDa
             size: dataContext.itemsCountPerPage
         };
 
-        //If bookmark or Acronym, paging is not supported
-        if (this.properties.entityTypes.indexOf(EntityType.Bookmark) === -1 && this.properties.entityTypes.indexOf(EntityType.Acronym) === -1) {
+        //If Bookmarks, Acronym or QnA, paging is not supported
+        if (this.properties.entityTypes.indexOf(EntityType.Bookmark) === -1 && this.properties.entityTypes.indexOf(EntityType.Acronym) === -1 && this.properties.entityTypes.indexOf(EntityType.QnA) === -1) {
             searchRequest.from = from;
         }
 
